@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.SecondGradeFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Segundo grado"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_second_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Nombre"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edt_second_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Email"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edt_second_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Phone number"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_second_spanish"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Español"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/edt_second_matematicas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Matermaticas"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_second_hitoria"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Historia"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_second_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="GUARDAR" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

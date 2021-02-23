@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.maroom.ui.fragments.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.maroom.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_firstGradeFragment"
+            app:destination="@id/firstGradeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_secondGradeFragment"
+            app:destination="@id/secondGradeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstGradeFragment"
+        android:name="com.example.maroom.ui.fragments.FirstGradeFragment"
+        android:label="fragment_first_grade"
+        tools:layout="@layout/fragment_first_grade" >
+        <action
+            android:id="@+id/action_firstGradeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_firstGradeFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.maroom.ui.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="grade"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="español"
+            app:argType="string" />
+        <argument
+            android:name="matematicas"
+            app:argType="string" />
+        <argument
+            android:name="historia"
+            app:argType="string" />
+        <argument
+            android:name="geografia"
+            app:argType="string" />
+        <argument
+            android:name="ingles"
+            app:argType="string" />
+        <argument
+            android:name="promedio"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_detailFragment_to_firstGradeFragment"
+            app:destination="@id/firstGradeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondGradeFragment"
+        android:name="com.example.maroom.ui.fragments.SecondGradeFragment"
+        android:label="fragment_second_grade"
+        tools:layout="@layout/fragment_second_grade" >
+        <action
+            android:id="@+id/action_secondGradeFragment_to_detailSecondFragment"
+            app:destination="@id/detailSecondFragment" />
+        <action
+            android:id="@+id/action_secondGradeFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSecondFragment"
+        android:name="com.example.maroom.ui.fragments.DetailSecondFragment"
+        android:label="fragment_detail_second"
+        tools:layout="@layout/fragment_detail_second" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="grade"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="español"
+            app:argType="string" />
+        <argument
+            android:name="matematicas"
+            app:argType="string" />
+        <argument
+            android:name="historia"
+            app:argType="string" />
+        <argument
+            android:name="geografia"
+            app:argType="string" />
+        <argument
+            android:name="ingles"
+            app:argType="string" />
+        <argument
+            android:name="promedio"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_detailSecondFragment_to_secondGradeFragment"
+            app:destination="@id/secondGradeFragment" />
+    </fragment>
+</navigation>
